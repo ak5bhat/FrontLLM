@@ -1,0 +1,27 @@
+
+<div class="container-fluid">
+    <div class="container-fluid">
+        <table class="table table-striped space">
+            <thead>
+                <tr>
+                    <th>Select</th> <!-- Add a column for checkboxes -->
+                    <th>Questions</th>
+                    <th>Answers</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of table1Data">
+                    <td class="form-check form-check-input">
+                        <input type="checkbox" [(ngModel)]="item.selected" />
+                    </td>
+                    <td>{{ item.question }}</td>
+                    <td>{{ item.answer }}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="editItem(item)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

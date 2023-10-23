@@ -1,0 +1,11 @@
+<div class="background-container">
+
+        <div class="button-class">
+
+            <button class="btn size" (click)="fileInput.click()">Upload File</button>
+            <input type="file" #fileInput style="display: none" (change)="onFileSelected($event)"/>
+
+            <button class="btn size">Download</button>
+
+        </div>
+</div>
